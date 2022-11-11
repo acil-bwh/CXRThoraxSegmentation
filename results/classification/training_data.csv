@@ -1,0 +1,1 @@
+mask_type,name,loss,BinaryAccuracy,Precision,AUC,loss_val,BinaryAccuracy_val,Precision_val,AUC_val
