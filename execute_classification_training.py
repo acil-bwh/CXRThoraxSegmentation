@@ -65,7 +65,7 @@ if __name__ == '__main__':
     parser.add_argument('-p',
                         '--path',
                         type=str,
-                        default='/home/mr1142/Documents/ACIL_data_repo/CXRThoraxSegmentation/data/pneumonia_classification/training_data',
+                        default='./data/pneumonia_classification/training_data',
                         help="training_images_path")    
 
     args = parser.parse_args()

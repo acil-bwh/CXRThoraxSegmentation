@@ -25,12 +25,12 @@ if __name__ == '__main__':
     parser.add_argument('-ip',
                         '--internal_path',
                         type=str,
-                        default='/home/mr1142/Documents/ACIL_data_repo/CXRThoraxSegmentation/data/pneumonia_classification/internal_validation',
+                        default='./data/pneumonia_classification/internal_validation',
                         help="training_images_path")    
     parser.add_argument('-ep',
                         '--external_path',
                         type=str,
-                        default='/home/mr1142/Documents/ACIL_data_repo/CXRThoraxSegmentation/data/pneumonia_classification/external_validation',
+                        default='./data/pneumonia_classification/external_validation',
                         help="training_images_path")    
 
     args = parser.parse_args()

@@ -21,7 +21,7 @@ if __name__ == '__main__':
     parser.add_argument('-p',
                         '--path',
                         type=str,
-                        default='/home/mr1142/Documents/Data/prueba',
+                        default='',
                         help="path with the images over you want the model to be applied")
 
     args = parser.parse_args()

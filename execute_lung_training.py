@@ -21,7 +21,7 @@ if __name__ == '__main__':
     parser.add_argument('-p',
                         '--path',
                         type=str,
-                        default='/home/mr1142/Documents/ACIL_data_repo/CXRThoraxSegmentation/data/lung_segmentation',
+                        default='./data/lung_segmentation',
                         help="segmentated images path")
 
     args = parser.parse_args()
