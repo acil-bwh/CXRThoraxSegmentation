@@ -45,7 +45,7 @@ Images from three different datasets were used for clinical validation. We selec
 ## Lung segmentation model
 In order to create a lung segmentation model, a dataset with 21165 images and its mask was used (https://kaggle.com/code/nikhilpandey360/lung-segmentation-from-chest-x-ray-dataset). This dataset has 10192 normal images, 3616 COVID images, 6012 images with lung opacity and 1345 pneumonia images (Lung Segmentation Dataset). All these images and masks are saved in ***./data/lung_segmentation/lung_segmentation_dataset*** 
 
-# Patologic classification model
+## Patologic classification model
 Lung and thorax segmentation models were compared using them as part of the image preprocessing for a classification model (normal vs pathologic). To train this classification model 10000 images from the NIH dataset (5000 images labeled as No Finding and 5000 images with any pathological label) were used, and they were split into train (80%) and validation (29%) folders (Classification Dataset). After selecting the best models of each class (with lung mask preprocessing or with thorax mask preprocessing) both were applied over the validation folder and also over an External Classification Validation Dataset (https://kaggle.com/code/nikhilpandey360/lung-segmentation-from-chest-x-ray-dataset) with pediatric images (normal and pneumonia). 
 
 All images were segmented by a clinician. These images and masks datasets are in ***./data*** folder:
