@@ -10,7 +10,7 @@ git clone https://github.com/acil-bwh/CXRThoraxSegmentation.git
 cd CXRThoraxSegmentation
 pip install -r requirements.txt
 ```
-3. Download datasets and models from (...). 
+3. Download datasets and models from S3 bucket repositoryat s3://cxr-thorax-segmentation. 
 
 4. Save all datasets in the ./data repository folder and all the models in the ./model repository folder
 
