@@ -5,7 +5,7 @@ import pandas as pd
 import classification_funct.image.prepare_img as fu
 
 
-def img_prepare(img, mask = 1, pix = 512):
+def img_prepare(img, mask, pix = 512):
     try:
         img = fu.get_prepared_img(img, pix, mask)
     except Exception as e:

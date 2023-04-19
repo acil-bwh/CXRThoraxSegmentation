@@ -43,13 +43,19 @@ def AUC_CI(y_true, y_pred, n_bootstraps, rng_seed = 42):
 
 
 # PLOTS
-def AUC_plot(fpr, tpr, thresholds, auc):
+def AUC_plot(fpr, tpr, thresholds, auc, title = '', aucci = None):
     fig, ax = plt.subplots()
     i = np.argmax(tpr-fpr)
     th = thresholds[i]
     x = fpr[i]
     y = tpr[i]
-    ax.plot(fpr,tpr, "g-", label="AUC="+str(round(auc, 2)))
+    if aucci != None:
+        ax.plot(fpr,tpr, "g-", label= "AUC=" + str(round(auc, 2)) + 
+                                        " (" + str(round(aucci[0],2)) +
+                                        "-" + str(round(aucci[1],2)) +
+                                        ")")
+    else:
+        ax.plot(fpr,tpr, "g-", label="AUC="+str(round(auc, 2)))
     ax.set_xlabel('False Positive Rate')
     ax.set_ylabel('True Positive Rate')
     try:
@@ -59,6 +65,7 @@ def AUC_plot(fpr, tpr, thresholds, auc):
         print('plot except')
     ax.plot([x], [y], "ro", label="th="+str(round(th,2))) 
     ax.legend(loc=4)
+    ax.set_title(title)
     return fig
 
 
